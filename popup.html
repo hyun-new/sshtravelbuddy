@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Safety Data: Travel or Not?</title>
+       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <h1>Recent Data</h1>
+        <h3>COVID Cases/Deaths Last Week</h2>
+        <h3>Are Cases Rising or Falling?</h3>
+        <div id="mypanel"></div>
+        <button id="refreshData">Refresh</button>
+          <button id="changeColor">change color</button>
+          <script type="text/javascript" src="https://api.covidtracking.com/v1/us/daily.json"></script>
+          <iframe id="holder" style="display: none">
+
+      <script type="text/javascript">
+
+      $.getJSON('https://api.covidtracking.com/v2/us/daily.json', function(data) {
+      console.log(data);// JSON result in `data` variable
+  });
+      </script>
+    </body>
+</html>
